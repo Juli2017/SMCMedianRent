@@ -1,10 +1,10 @@
 // Edit the initial year and number of tabs to match your GeoJSON data and tabs in index.html
-var year = "1910";
-var tabs = 11;
+var year = "2000";
+var tabs = 6;
 
 // Edit the center point and zoom level
 var map = L.map('map', {
-  center: [41.79, -72.6],
+  center: [37, -122.6],
   zoom: 10,
   scrollWheelZoom: false
 });
@@ -19,7 +19,7 @@ new L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png
 }).addTo(map);
 
 // Edit to upload GeoJSON data file from your local directory
-$.getJSON("town-home-value-index.geojson", function (data) {
+$.getJSON("GrossRentByZCTASMC.geojson", function (data) {
   geoJsonLayer = L.geoJson(data, {
     style: style,
     onEachFeature: onEachFeature
@@ -29,11 +29,11 @@ $.getJSON("town-home-value-index.geojson", function (data) {
 // Edit range cutoffs and colors to match your data; see http://colorbrewer.org
 // Any values not listed in the ranges below displays as the last color
 function getColor(d) {
-  return d > 2.0 ? '#006d2c' :
-         d > 1.5 ? '#31a354' :
-         d > 1.0 ? '#74c476' :
-         d > 0.5 ? '#bae4b3' :
-         d > 0.1 ? '#edf8e9' :
+  return d > 2000 ? '#006d2c' :
+         d > 1800 ? '#31a354' :
+         d > 1600 ? '#74c476' :
+         d > 1500 ? '#bae4b3' :
+         d > 1000 ? '#edf8e9' :
                    'white' ;
 }
 
@@ -106,7 +106,7 @@ $(".tabItem").click(function() {
 var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [0.1, 0.5, 1.0, 1.5, 2],
+    grades = [1000, 1500, 1600, 1800, 2000],
     labels = [],
     from, to;
   for (var i = 0; i < grades.length; i++) {
