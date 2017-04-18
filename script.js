@@ -77,7 +77,7 @@ function onEachFeature(feature, layer) {
 }
 
 // Creates an info box on the map
-var info = L.control();
+var info = L.control({position: 'topleft'});
 info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'info');
     this.update();
