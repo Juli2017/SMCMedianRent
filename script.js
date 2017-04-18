@@ -103,7 +103,7 @@ $(".tabItem").click(function() {
 
 // Edit grades in legend to match the range cutoffs inserted above
 // In this example, the last grade will appear as "2+"
-var legend = L.control({position: 'bottomright'});
+var legend = L.control({position: 'bottomleft'});
 legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'info legend'),
     grades = [0, 1000, 1500, 1800, 2000],
