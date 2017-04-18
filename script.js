@@ -31,9 +31,9 @@ $.getJSON("GrossRentByZCTASMC.geojson", function (data) {
 function getColor(d) {
   return d > 2000 ? '#006d2c' :
          d > 1800 ? '#31a354' :
-         d > 1600 ? '#74c476' :
-         d > 1500 ? '#bae4b3' :
-         d > 1000 ? '#edf8e9' :
+         d > 1500 ? '#74c476' :
+         d > 1000 ? '#bae4b3' :
+         d > 0 ? '#edf8e9' :
                    'white' ;
 }
 
@@ -106,7 +106,7 @@ $(".tabItem").click(function() {
 var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'info legend'),
-    grades = [1000, 1500, 1600, 1800, 2000],
+    grades = [0, 1000, 1500, 1800, 2000],
     labels = [],
     from, to;
   for (var i = 0; i < grades.length; i++) {
