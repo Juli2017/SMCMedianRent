@@ -1,5 +1,5 @@
 .interactiveContainer {
-    width: 60%;
+    width: 1000%;
     font-family: Arial, sans-serif;
 }
 /* Edit top to fit tabBar height: 35px */
@@ -8,7 +8,7 @@
     position: absolute;
     left: 0;
     top: 35px;
-    width: 80%;
+    width: 100%;
     height: 600px;
 }
 .tabBar {
