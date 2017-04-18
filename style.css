@@ -1,5 +1,5 @@
 .interactiveContainer {
-    width: 100%;
+    width: 80%;
     font-family: Arial, sans-serif;
 }
 /* Edit top to fit tabBar height: 35px */
@@ -91,7 +91,7 @@ In this example, width = 9% for 10 tabs + cell borders */
 .legend {
     width: 100px;
     position: absolute;
-    right: 0px;
+    left: 0px;
     bottom: 10px;
     text-align: left;
     line-height: 18px;
