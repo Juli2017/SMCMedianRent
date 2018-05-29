@@ -1,6 +1,6 @@
 // Edit the initial year and number of tabs to match your GeoJSON data and tabs in index.html
 var year = "2000";
-var tabs = 6;
+var tabs = 7;
 
 // Edit the center point and zoom level
 var map = L.map('map', {
