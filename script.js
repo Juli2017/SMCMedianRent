@@ -1,6 +1,6 @@
 // Edit the initial year and number of tabs to match your GeoJSON data and tabs in index.html
 var year = "2000";
-var tabs = 6;
+var tabs = 7;
 
 // Edit the center point and zoom level
 var map = L.map('map', {
@@ -19,7 +19,7 @@ new L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png
 }).addTo(map);
 
 // Edit to upload GeoJSON data file from your local directory
-$.getJSON("GrossRentByZCTASMC.geojson", function (data) {
+$.getJSON("MedianGrossRentByZCTA.geojson", function (data) {
   geoJsonLayer = L.geoJson(data, {
     style: style,
     onEachFeature: onEachFeature
